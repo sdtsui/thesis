@@ -20,8 +20,14 @@ describe("e2e: Course endpoints :", function(){
         console.log(err);
       }
       if (results){
+        var parsedResults = JSON.parse(results.text);
         //receiving JSON;
         expect(results.status).to.equal(200);
+        //1st result: Presidio
+        expect(parsedResults[0].obj.name).to.equal('Presidio Golf Course');
+        //5th result: LMGC
+        expect(parsedResults[4].obj.name).to.equal('Lake Merced Golf Club');
+        expect(parsedResults.length).to.equal(5);
         done();
       }
     });
