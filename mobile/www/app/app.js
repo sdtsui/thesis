@@ -12,7 +12,8 @@ angular.module('app', [
   'app.home',
   'app.courses',
   'app.times',
-  'app.invite'
+  'app.invite',
+  'ngCordova'
 ])
 
 .config(function($stateProvider, $urlRouterProvider) {

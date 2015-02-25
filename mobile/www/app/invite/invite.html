@@ -20,6 +20,11 @@
         <input type="tel" ng-model="vm.userInfo.userNumber">
       </label>
       <button class="button button-positive button-block" ng-click="vm.bookTime()">Book It</button>
+          <div class="padding">
+        <button class="button" ng-click="vm.showToast('testing the bottom', 'long', 'bottom')">Long Bottom</button>
+        <button class="button" ng-click="vm.showToast('testing the top', 'short', 'top')">Short Top</button>
+        <button class="button" ng-click="vm.showToast('this is a test', 'long', 'center')">Long Center</button>
+        </div>
     </div>
   </ion-content>
 </ion-view>
